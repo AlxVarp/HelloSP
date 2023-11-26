@@ -1,18 +1,18 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage ('Build'){
-            step{
+    stages {
+        stage('Build') {
+            steps {
                 echo "Estapa Build No Disponible"
             }
         }
-        stage ('Test'){
-            step{
+        stage('Test') {
+            steps {
                 echo "Etapa Test No Disponible"
             }
         }
-        stage ('Deploy'){
-            step{
+        stage('Deploy') {
+            steps {
                 sh "docker ps"
             }
         }
