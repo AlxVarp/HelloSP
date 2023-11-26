@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Estapa Build No Disponible"
+                echo sh "Estapa Build No Disponible"
             }
         }
         stage('Test') {
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "docker ps"
+                echo sh "Estapa Build No Disponible"
             }
         }
     }
