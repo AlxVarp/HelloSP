@@ -18,9 +18,5 @@ WORKDIR /app
 
 # Copia el artefacto de la aplicación desde la imagen de construcción
 COPY --from=build /app/target/spring-boot-3-hello-world-1.0.0-SNAPSHOT.jar app.jar
-
-# Expone el puerto en el que la aplicación se ejecutará (ajusta según sea necesario)
 EXPOSE 8080
-
-# Comando para ejecutar la aplicación Spring Boot
 CMD ["java", "-jar", "app.jar"]
