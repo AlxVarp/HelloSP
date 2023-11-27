@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  backend_java:
+    container_name: java_app
+    image: backend/java:1.0.0
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    networks:
+      - backend
+
+networks:
+  backend:
+    name: backend_java_net
