@@ -3,11 +3,9 @@ pipeline {
     stages {
         stage('Verificando Herramientas') {
             steps {
-                sh '''
-                docker version
-                docker info
-                docker-compose --version
-                '''
+                sh "docker-compose down"
+                sh "docker-compose up -d"
+                sh "docker-compose logs"
             }
         }    
     }   
